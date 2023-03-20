@@ -206,7 +206,8 @@ cursor.execute(query_Table)
 
 
 ## Fetch all the content of the table
-headers = {'Authorization' : 'token ' + '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'}
+token = 12345 #(here will needs to be your own token)
+headers = {'Authorization' : 'token ' + token}
 url = 'https://api.github.com/repos/apache/hadoop/contributors'
 response = requests.get(url,headers = headers, params={'per_page': 100})
 contributors_json = response.json()
