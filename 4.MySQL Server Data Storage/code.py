@@ -25,7 +25,8 @@ import time
 
 
 ### personal identification code
-headers = {'Authorization' : 'token ' + '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'}
+token = 12345 #Here I hided my real token
+headers = {'Authorization' : 'token ' + token}
 response = requests.get('https://api.github.com/repos/apache/hadoop/contributors', headers = headers, params={'per_page': 100})
 contributors_json = json.loads(response.content)
 # len(contributors_json)
